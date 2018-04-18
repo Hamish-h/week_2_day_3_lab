@@ -20,8 +20,8 @@ class CustomerTest < MiniTest::Test
   end
 
   def test_count_contents_of_wallet__when_not_empty
-
-    assert_equal(0, @customer.wallet())
+    @customer.add_money_to_wallet(@money)
+    assert_equal(10, @customer.wallet())
   end
 
   def test_add_money_to_wallet
