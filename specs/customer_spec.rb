@@ -18,7 +18,11 @@ class CustomerTest < MiniTest::Test
     assert_equal(0, @customer.wallet())
   end
 
-
+  def test_add_money_to_wallet
+    money = 10
+    @customer.add_money_to_wallet(money)
+    assert_equal(10, @customer.wallet())
+  end
 
 
 

@@ -7,4 +7,8 @@ class Customer
       @wallet = wallet
     end
 
+    def add_money_to_wallet(money)
+      @wallet += money
+    end
+
   end
