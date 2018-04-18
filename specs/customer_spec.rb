@@ -14,6 +14,9 @@ class CustomerTest < MiniTest::Test
     assert_equal("Hamish", @customer.name())
   end
 
+  def test_count_contents_of_wallet__when_empty
+    assert_equal(0, @customer.wallet())
+  end
 
 
 
