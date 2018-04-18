@@ -6,4 +6,5 @@ require_relative("../customer.rb")
 
 class PubTest < MiniTest::Test
 
+
 end
