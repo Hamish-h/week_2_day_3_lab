@@ -15,7 +15,7 @@ class PubTest < MiniTest::Test
     assert_equal("Joe's Drinking Hole", @pub.name())
   end
 
-  def test_get_till_balance
+  def test_count_contents_of_till
     assert_equal(100, @pub.till())
   end
 
@@ -32,4 +32,9 @@ class PubTest < MiniTest::Test
     @pub.add_drink_to_drink_stock(@drink)
     assert_equal(1, @pub.stock_take())
   end
+
+
+
+
+  
 end
