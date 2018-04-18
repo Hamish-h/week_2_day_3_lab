@@ -23,6 +23,11 @@ class PubTest < MiniTest::Test
     assert_equal(0, @pub.stock_take())
   end
 
+  def test_stock_take__when_not_empty
+    @pub.add_drink_to_drink_stock(@drink)
+    assert_equal(1, @pub.stock_take())
+  end
+
   def test_add_drink_to_drink_stock
     @pub.add_drink_to_drink_stock(@drink)
     assert_equal(1, @pub.stock_take())
