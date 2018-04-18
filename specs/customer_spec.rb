@@ -2,12 +2,15 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../pub.rb")
 require_relative("../customer.rb")
+require_relative("../drink")
 
 class CustomerTest < MiniTest::Test
 
   def setup
     @customer = Customer.new("Hamish", 0)
-    @money = 10
+    @pub = Pub.new("Joe's Drinking Hole", 100)
+    @drink = Drink.new("Joe's Beer", 1)
+    @customer_money = 10
   end
 
 
@@ -20,13 +23,17 @@ class CustomerTest < MiniTest::Test
   end
 
   def test_count_contents_of_wallet__when_not_empty
-    @customer.add_money_to_wallet(@money)
+    @customer.add_money_to_wallet(@customer_money)
     assert_equal(10, @customer.wallet())
   end
 
   def test_add_money_to_wallet
-    @customer.add_money_to_wallet(@money)
+    @customer.add_money_to_wallet(@customer_money)
     assert_equal(10, @customer.wallet())
+  end
+
+  def test_pick_drink
+
   end
 
 
