@@ -11,4 +11,8 @@ class Customer
       @wallet += money
     end
 
+    def pick_drink(pub)
+      return pub.drink_stock[0]
+    end
+
   end

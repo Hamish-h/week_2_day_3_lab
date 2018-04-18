@@ -32,8 +32,9 @@ class CustomerTest < MiniTest::Test
     assert_equal(10, @customer.wallet())
   end
 
-  def test_pick_drink
-
+  def test_pick_drink__fridge_not_empty
+    @pub.add_drink_to_drink_stock(@drink)
+    assert_equal(@drink, @customer.pick_drink(@pub))
   end
 
 
